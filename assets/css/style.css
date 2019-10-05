@@ -1,0 +1,581 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
+    align-items: center;
+    background: linear-gradient(270deg, #FC5555 -1.35%, #FF00A8 100%);
+}
+
+sub-header {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
+    align-items: center;
+    background: black;
+    justify-content: center;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+    display: flex;
+}
+
+.logo-container {
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+nav {
+    flex: 0.1;
+    align-items: left;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.2s ease 0s;
+}
+
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: -50px;
+    background: linear-gradient(270deg, #FF00A8 0%, #FC5555 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: drop 0.5s ease;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585722;
+    animation: drop 0.8s ease;
+}
+
+.cta {
+    padding: 10px 0px 0px 0px;
+}
+
+.cta-select {
+    border: 2px solid #fff;
+    background: linear-gradient(270deg, #FC5555 0%, #FF00A8 109.51%);
+    border-radius: 0px 20px;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    animation: drop 1.0s ease;
+}
+
+.cta-select:hover {
+    border: 2px solid #fff;
+    background: linear-gradient(180deg, #FC5555 0%, #FF00A8 109.51%);
+    border-radius: 20px 00px;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease 0s;
+}
+
+.cover {
+    flex: 1;
+    display: flex;
+    height: 60vh;
+    align-content: center;
+}
+
+.cover img {
+    height: 100%;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 1.2s ease;
+}
+
+.big-arrow {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    z-index: -1;
+    height: 100%;
+    animation: drop 1.5s ease;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo-container {
+        flex: 1;
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+    nav {
+        flex: 1;
+        align-items: left;
+    }
+    .nav-links {
+        justify-content: space-around;
+        list-style: none;
+    }
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+    .cover img {
+        height: 60%;
+    }
+}
+
+
+/* MENU STYLES */
+
+.menu-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: 3px;
+    margin-right: 30px;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    /* background: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Hamburger Line */
+
+.menu-wrap .hamburger>div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+
+/* Hamburger Lines - Top & Bottom */
+
+.menu-wrap .hamburger>div::before,
+.menu-wrap .hamburger>div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+
+/* Moves Line Down */
+
+.menu-wrap .hamburger>div::after {
+    top: 10px;
+}
+
+
+/* Toggler Animation */
+
+.menu-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+}
+
+
+/* Turns Lines Into X */
+
+.menu-wrap .toggler:checked+.hamburger>div:before,
+.menu-wrap .toggler:checked+.hamburger>div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+/* Rotate On Hover When Checked */
+
+.menu-wrap .toggler:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+}
+
+
+/* Show Menu */
+
+.menu-wrap .toggler:checked~.menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked~.menu>div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked~.menu>div>div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu>div {
+    background: linear-gradient(180deg, #FF00A8 0%, #FC5555 100%);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu>div>div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu>div>div>ul>li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu>div>div>ul>li>a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+
+/* Search Bar */
+
+.box {
+    position: relative;
+    margin-left: 80px;
+    /* margin-top: 10px; */
+    margin-right: 10px;
+    background-color: rgb(68, 68, 68);
+    border-radius: 20px;
+}
+
+.input_box {
+    border: none;
+    outline: none;
+    background: none;
+    float: left;
+    padding: 0;
+    color: #ffff;
+    font-size: 16px;
+    transition: 0.4s all;
+    line-height: 40px;
+    width: 0px;
+}
+
+.btn {
+    color: red;
+    background: white;
+    float: right;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.box:hover .input_box {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.box:hover .btn {
+    background-color: #fff;
+}
+
+
+/* wishlist */
+
+.wl-box {
+    position: relative;
+    margin-left: 1px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border-color: red;
+}
+
+.wl-btn {
+    color: red;
+    background: white;
+    float: right;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.wl-btn.pressed {
+    color: white;
+    background: red;
+}
+
+.wl-box:hover .wl-btn {
+    background-color: yellow;
+}
+
+.strikethrough {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: -150px;
+    transform: rotate(-3.98deg);
+}
+
+.strikethrough p {
+    font-size: 40px;
+    color: #585722;
+    animation: up 1.8s ease;
+}
+
+rd {
+    color: red;
+    margin-top: 20px;
+}
+
+strike {
+    color: red;
+}
+
+
+/* Float Action Button */
+
+.fab-container {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.fab-icon-holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fab-icon-holder:hover {
+    opacity: 0.8;
+}
+
+.fab-icon-holder i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-style: 25px;
+    color: #FF00A8;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.fab-options {
+    list-style-type: none;
+    margin: 0;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
+}
+
+.fab:hover+.fab-options,
+.fab-options:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fab-options li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.fab-label {
+    padding: 4px 7px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: black;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.fab-label-main {
+    padding: 6px 14px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.fab-label-main:after {
+    position: absolute;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-left: 10px solid black;
+    border-bottom: 5px solid transparent;
+    left: 56px;
+    top: 21px;
+    content: '';
+}
