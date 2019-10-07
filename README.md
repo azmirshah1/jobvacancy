@@ -1,6 +1,6 @@
 # Job Application at Aplikasi.us as Front End Developer
 
-This is the landing page for the Aplikasi.us. Before starting this project, I used this drawing as a reference and convert it into mockup using figma.
+This is the landing page for the Aplikasi.us. Before starting this project, I used this drawing as a reference and convert it into mockup using figma. [Visit Figma!]( https://www.figma.com/file/j4GrS4HFkCCMYJjf3JrvpZ/Job-Application-as-Front-End-Developer?node-id=0%3A1)
 # Wireframe
 ![alt text](https://azmirshah.com/wp-content/uploads/2019/10/Wireframe.png)
 This is the original drawing provided by Aplikasi.us
