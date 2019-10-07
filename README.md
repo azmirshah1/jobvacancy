@@ -7,7 +7,7 @@ This is the original drawing provided by Aplikasi.us
 
 # Mockup
 ![alt text](https://azmirshah.com/wp-content/uploads/2019/10/Desktop-Version.png)
-Ido some adjustment on this mockup with existing element.
+I do some adjustment on this mockup with existing element.
 
 # Front end version
 ![alt text](https://azmirshah.com/wp-content/uploads/2019/10/front-end.png)
